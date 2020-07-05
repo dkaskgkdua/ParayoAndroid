@@ -10,7 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.viewpager.widget.ViewPager
 import com.example.parayo.R
 import com.example.parayo.common.Prefs
-import com.example.parayo.inquiry.myinquiry.MyInquiryActivity
+//import com.example.parayo.inquiry.myinquiry.MyInquiryActivity
 import com.example.parayo.signin.SigninActivity
 import com.example.parayo.view.borderBottom
 import com.google.android.material.navigation.NavigationView
@@ -97,7 +97,7 @@ class ProductMainUI(
                         setIcon(R.drawable.ic_chat)
                     }
                     add(NONE, MENU_ID_LOGOUT, NONE, "로그아웃").apply {
-                        setIcon(R.drawable.ic_signout)
+                        setIcon(R.drawable.ic_logout)
                     }
                 }
                 setNavigationItemSelectedListener(this@ProductMainUI)
@@ -110,7 +110,7 @@ class ProductMainUI(
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             MENU_ID_INQUIRY -> {
-                viewModel.startActivity<MyInquiryActivity>()
+               // viewModel.startActivity<MyInquiryActivity>()
             }
             MENU_ID_LOGOUT -> {
                 Prefs.token = null
