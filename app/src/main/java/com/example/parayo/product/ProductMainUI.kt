@@ -75,7 +75,10 @@ class ProductMainUI(
                         id = generateViewId()
                     }.lparams(matchParent, matchParent)
                 }
-
+                /* floatingActionButton은 기본적으로 UI 최상단에 떠있는 원혀의 버튼이다.
+                *  gravity 속성을 이용해 FrameLayout에서의 위치를 우측 하단으로 지정해주고 마진을
+                *  설정해 세밀한 위치를 잡아주었다. 아이콘으로 사용된 ic_add 은 다운 후
+                *  fillColor 속성을 #F1F로 변경해주었다. */
                 floatingActionButton {
                     imageResource = R.drawable.ic_add
                     onClick { viewModel.openRegistrationActivity() }
